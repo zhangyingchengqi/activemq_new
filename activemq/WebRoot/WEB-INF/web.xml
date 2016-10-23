@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name></display-name>
+  <listener>
+    <listener-class>com.yc.listener.ActiveMQEmailListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>SendEmailServlet</servlet-name>
+    <servlet-class>com.yc.servlet.SendEmailServlet</servlet-class>
+  </servlet>
+  <filter>
+    <filter-name>CharacterEncoding</filter-name>
+    <filter-class>com.yc.filters.CharacterEncoding</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet-mapping>
+    <servlet-name>SendEmailServlet</servlet-name>
+    <url-pattern>/sendEmail.action</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

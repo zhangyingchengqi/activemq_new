@@ -1,0 +1,33 @@
+@charset "utf-8";
+#emailInfo input,textarea,select{
+	width:150px;
+	resize:none;
+}
+#emailInfo label{
+	width:100px;
+}
+#emailInfo .delete,#addReceiver{
+	cursor:pointer;
+}
+#emailInfo table td{
+	padding:5px;
+	text-align:center;
+}
+#emailTip{
+	border:1px solid #000;
+	position:absolute;
+	background:#69F;
+	text-align:center;
+	line-height:25px;
+	font-size:15px;
+	min-width:148px;
+	display:none;
+}
+#emailTip span{
+	padding:0px 5px;
+	display:block;
+	cursor:pointer;
+}
+#emailTip span:hover{
+	background:#666;
+}
